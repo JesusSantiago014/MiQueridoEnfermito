@@ -1,0 +1,65 @@
+﻿<Window x:Class="FarmaciaMiQuerido.Productos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmaciaMiQuerido"
+        mc:Ignorable="d"
+        Title="Productos" Height="500" Width="500">
+    <Grid Background="#FF35BBD8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label FontSize="30" HorizontalAlignment="Center" Grid.Row="0">Mi Querido Enfermito"productos"</Label>
+        <WrapPanel Grid.Row="1" Background="#FF35BBD8">
+            <StackPanel Orientation="Horizontal">
+                <Label Width="120">Producto </Label>
+
+             <TextBox x:Name="txbNombre" Width="200"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Width="120">categoria</Label>
+                <TextBox x:Name="txbCategoria" Width="200"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Width="120">Descripcion</Label>
+
+                <TextBox x:Name="txbDescripcion" Width="200"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Width="120">Precio de venta</Label>
+
+                <TextBox x:Name="txbPventa" Width="200"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Width="120">Precio de compra</Label>
+
+                <TextBox x:Name="txbPcompra" Width="200"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Width="120">Producto existente</Label>
+
+                <TextBox x:Name="txbActual" Width="200"></TextBox>
+            </StackPanel>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="2">
+            <Button Width="70" x:Name="btnNuevo" Click="btnNuevo_Click" >Nuevo</Button>
+            <Button Width="70" x:Name="btnGuardar" Click="btnGuardar_Click">Guardar</Button>
+            <Button Width="70" x:Name="btnEditar" Click="btnEditar_Click" >Editar</Button>
+            <Button Width="70" x:Name="btnCancelar" Click="btnCancelar_Click">Cancelar</Button>
+            <Button Width="70" x:Name="btnEliminar" Click="btnEliminar_Click">Eliminar</Button>
+            
+        </WrapPanel>
+        <DataGrid x:Name="dtgTabla" IsReadOnly="True" Grid.Row="3" Background="#FF35BBD8"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="FarmaciaMiQuerido.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmaciaMiQuerido"
+        mc:Ignorable="d"
+        Title="Mi Querido Enfermito" Height="350" Width="525">
+    <Grid Margin="0,0,-8,11" Background="#FF35BBD8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label FontSize="30" HorizontalAlignment="Center" Grid.Row="0">Mi Querido Enfermito</Label>
+        <WrapPanel Grid.Row="1" Background="#FF35BBD8">
+            <StackPanel Orientation="Horizontal">
+                <Label Width="280">1-Productos *</Label>
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="280">2.-Clientes</Label>
+
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal">
+                <Label Width="280">3.-Empleado *</Label>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="480">4.-Venta *</Label>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="215">
+                <Label Width="580">!. precione el boton que desee *</Label>
+
+            </StackPanel>
+            <WrapPanel Grid.Row="2">
+
+                <Button Width="90" x:Name="btnProductos" Click="btnProductos_Click" >Productos</Button>
+                <Button Width="90" x:Name="btnCliente" Click="btnCliente_Click">Clientes</Button>
+                <Button Width="90" x:Name="btnEmpleados" Click="btnEmpleados_Click" >empleados</Button>
+                <Button Width="90" x:Name="btnVenta" Click="btnVenta_Click" >Venta</Button>
+                <Button Width="90" x:Name="btnSalir" Click="btnSalir_Click" >salir</Button>
+
+            </WrapPanel>
+            <Image x:Name="Image2_png" Height="50" Source="Image2.png" Stretch="Fill" Width="80"/>
+        </WrapPanel>
+
+
+    </Grid>
+</Window>
